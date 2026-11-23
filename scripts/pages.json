@@ -1,0 +1,150 @@
+{
+  "academic": {
+    "file": "academic.html",
+    "label": "ผลงานวิชาการ"
+  },
+  "best-practice": {
+    "file": "best-practice.html",
+    "label": "ผลการปฏิบัติที่เป็นเลิศ"
+  },
+  "care": {
+    "file": "care.html",
+    "label": "ดูแลผู้เรียน"
+  },
+  "career": {
+    "file": "career.html",
+    "label": "การศึกษาเพื่อพัฒนาอาชีพ"
+  },
+  "classroom-research": {
+    "file": "classroom-research.html",
+    "label": "รายงานวิจัยในชั้นเรียน"
+  },
+  "community-books-health": {
+    "file": "community-books-health.html",
+    "label": "มุมอ่านสร้างสุขภาพ ณ รพ.สต."
+  },
+  "community-books-massage": {
+    "file": "community-books-massage.html",
+    "label": "มุมอ่านภูมิปัญญาไทย ณ กลุ่มนวดแผนไทย"
+  },
+  "community-books": {
+    "file": "community-books.html",
+    "label": "มุมหนังสือชุมชนออนไลน์"
+  },
+  "community-development": {
+    "file": "community-development.html",
+    "label": "การศึกษาเพื่อพัฒนาสังคมและชุมชน"
+  },
+  "community-learning": {
+    "file": "community-learning.html",
+    "label": "แหล่งเรียนรู้ชุมชน"
+  },
+  "community-poster-health": {
+    "file": "community-poster-health.html",
+    "label": "ป้าย A4 มุมอ่านสร้างสุขภาพ"
+  },
+  "community-poster-massage": {
+    "file": "community-poster-massage.html",
+    "label": "ป้าย A4 มุมอ่านภูมิปัญญาไทย"
+  },
+  "curriculum-2551": {
+    "file": "curriculum-2551.html",
+    "label": "หลักสูตร 2551"
+  },
+  "curriculum-2567": {
+    "file": "curriculum-2567.html",
+    "label": "หลักสูตร 2567"
+  },
+  "digital-library": {
+    "file": "digital-library.html",
+    "label": "ห้องสมุดดิจิทัล"
+  },
+  "etv-2551": {
+    "file": "etv-2551.html",
+    "label": "คลังสื่อการเรียนรู้ หลักสูตร พ.ศ. 2551"
+  },
+  "etv-2567": {
+    "file": "etv-2567.html",
+    "label": "คลังสื่อการเรียนรู้ หลักสูตร พ.ศ. 2567"
+  },
+  "etv": {
+    "file": "etv.html",
+    "label": "คลังสื่อการเรียนรู้ ETV"
+  },
+  "index": {
+    "file": "index.html",
+    "label": "หน้าแรก"
+  },
+  "learning": {
+    "file": "learning.html",
+    "label": "การเรียนรู้"
+  },
+  "life-skills": {
+    "file": "life-skills.html",
+    "label": "การศึกษาเพื่อพัฒนาทักษะชีวิต"
+  },
+  "lifelong": {
+    "file": "lifelong.html",
+    "label": "การเรียนรู้ตลอดชีวิต"
+  },
+  "massage": {
+    "file": "massage.html",
+    "label": "นวดแผนไทยบ้านทุ่งพล้อ"
+  },
+  "news": {
+    "file": "news.html",
+    "label": "ประชาสัมพันธ์"
+  },
+  "online": {
+    "file": "online.html",
+    "label": "ห้องเรียนออนไลน์"
+  },
+  "qualification": {
+    "file": "qualification.html",
+    "label": "การเรียนรู้เพื่อคุณวุฒิตามระดับ"
+  },
+  "reading-activities": {
+    "file": "reading-activities.html",
+    "label": "กิจกรรมส่งเสริมการอ่านออนไลน์"
+  },
+  "reading-connection": {
+    "file": "reading-connection.html",
+    "label": "วิธีเชื่อมกิจกรรมอ่านออนไลน์"
+  },
+  "reading": {
+    "file": "reading.html",
+    "label": "กิจกรรมส่งเสริมการอ่าน"
+  },
+  "results-2569": {
+    "file": "results-2569.html",
+    "label": "ปีงบประมาณ 2569"
+  },
+  "results-2570": {
+    "file": "results-2570.html",
+    "label": "ปีงบประมาณ 2570"
+  },
+  "results": {
+    "file": "results.html",
+    "label": "ผลการดำเนินงาน"
+  },
+  "school": {
+    "file": "school.html",
+    "label": "ข้อมูลสถานศึกษา"
+  },
+  "self-development": {
+    "file": "self-development.html",
+    "label": "การเรียนรู้เพื่อการพัฒนาตนเอง"
+  },
+  "staff-performance": {
+    "file": "staff-performance.html",
+    "label": "สรุปผลการปฏิบัติงานพนักงานราชการ"
+  },
+  "sufficiency": {
+    "file": "sufficiency.html",
+    "label": "การเรียนรู้ตามหลักปรัชญาของเศรษฐกิจพอเพียง"
+  },
+  "weaving": {
+    "file": "weaving.html",
+    "label": "กลุ่มสตรีทอผ้าบ้านแม่ราก"
+  }
+}

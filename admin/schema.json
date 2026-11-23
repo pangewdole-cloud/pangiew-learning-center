@@ -1,0 +1,2691 @@
+{
+  "locale": "th",
+  "media_folder": "site/assets/uploads",
+  "public_folder": "/assets/uploads",
+  "site_url": "https://pangiew-learning-center.vercel.app",
+  "display_url": "https://pangiew-learning-center.vercel.app",
+  "collections": [
+    {
+      "name": "pages",
+      "label": "แก้ข้อความและรูปบนเว็บไซต์",
+      "files": [
+        {
+          "name": "academic",
+          "label": "ผลงานวิชาการ",
+          "file": "content/academic.json",
+          "fields": [
+            {
+              "name": "title",
+              "label": "ชื่อรายการในหลังบ้าน",
+              "widget": "string"
+            },
+            {
+              "name": "texts",
+              "label": "ข้อความบนหน้าเว็บ",
+              "widget": "list",
+              "allow_add": false,
+              "allow_delete": false,
+              "summary": "{{fields.label}}",
+              "fields": [
+                {
+                  "name": "id",
+                  "label": "รหัสตำแหน่ง",
+                  "widget": "hidden"
+                },
+                {
+                  "name": "label",
+                  "label": "หัวข้ออ้างอิง",
+                  "widget": "hidden"
+                },
+                {
+                  "name": "text",
+                  "label": "ข้อความ",
+                  "widget": "text"
+                }
+              ]
+            },
+            {
+              "name": "images",
+              "label": "ภาพประกอบ",
+              "widget": "list",
+              "allow_add": false,
+              "allow_delete": false,
+              "summary": "{{fields.alt}}",
+              "fields": [
+                {
+                  "name": "id",
+                  "label": "รหัสตำแหน่ง",
+                  "widget": "hidden"
+                },
+                {
+                  "name": "url",
+                  "label": "รูปภาพ",
+                  "widget": "image"
+                },
+                {
+                  "name": "alt",
+                  "label": "คำอธิบายภาพ",
+                  "widget": "string"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "best-practice",
+          "label": "ผลการปฏิบัติที่เป็นเลิศ",
+          "file": "content/best-practice.json",
+          "fields": [
+            {
+              "name": "title",
+              "label": "ชื่อรายการในหลังบ้าน",
+              "widget": "string"
+            },
+            {
+              "name": "texts",
+              "label": "ข้อความบนหน้าเว็บ",
+              "widget": "list",
+              "allow_add": false,
+              "allow_delete": false,
+              "summary": "{{fields.label}}",
+              "fields": [
+                {
+                  "name": "id",
+                  "label": "รหัสตำแหน่ง",
+                  "widget": "hidden"
+                },
+                {
+                  "name": "label",
+                  "label": "หัวข้ออ้างอิง",
+                  "widget": "hidden"
+                },
+                {
+                  "name": "text",
+                  "label": "ข้อความ",
+                  "widget": "text"
+                }
+              ]
+            },
+            {
+              "name": "images",
+              "label": "ภาพประกอบ",
+              "widget": "list",
+              "allow_add": false,
+              "allow_delete": false,
+              "summary": "{{fields.alt}}",
+              "fields": [
+                {
+                  "name": "id",
+                  "label": "รหัสตำแหน่ง",
+                  "widget": "hidden"
+                },
+                {
+                  "name": "url",
+                  "label": "รูปภาพ",
+                  "widget": "image"
+                },
+                {
+                  "name": "alt",
+                  "label": "คำอธิบายภาพ",
+                  "widget": "string"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "care",
+          "label": "ดูแลผู้เรียน",
+          "file": "content/care.json",
+          "fields": [
+            {
+              "name": "title",
+              "label": "ชื่อรายการในหลังบ้าน",
+              "widget": "string"
+            },
+            {
+              "name": "texts",
+              "label": "ข้อความบนหน้าเว็บ",
+              "widget": "list",
+              "allow_add": false,
+              "allow_delete": false,
+              "summary": "{{fields.label}}",
+              "fields": [
+                {
+                  "name": "id",
+                  "label": "รหัสตำแหน่ง",
+                  "widget": "hidden"
+                },
+                {
+                  "name": "label",
+                  "label": "หัวข้ออ้างอิง",
+                  "widget": "hidden"
+                },
+                {
+                  "name": "text",
+                  "label": "ข้อความ",
+                  "widget": "text"
+                }
+              ]
+            },
+            {
+              "name": "images",
+              "label": "ภาพประกอบ",
+              "widget": "list",
+              "allow_add": false,
+              "allow_delete": false,
+              "summary": "{{fields.alt}}",
+              "fields": [
+                {
+                  "name": "id",
+                  "label": "รหัสตำแหน่ง",
+                  "widget": "hidden"
+                },
+                {
+                  "name": "url",
+                  "label": "รูปภาพ",
+                  "widget": "image"
+                },
+                {
+                  "name": "alt",
+                  "label": "คำอธิบายภาพ",
+                  "widget": "string"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "career",
+          "label": "การศึกษาเพื่อพัฒนาอาชีพ",
+          "file": "content/career.json",
+          "fields": [
+            {
+              "name": "title",
+              "label": "ชื่อรายการในหลังบ้าน",
+              "widget": "string"
+            },
+            {
+              "name": "texts",
+              "label": "ข้อความบนหน้าเว็บ",
+              "widget": "list",
+              "allow_add": false,
+              "allow_delete": false,
+              "summary": "{{fields.label}}",
+              "fields": [
+                {
+                  "name": "id",
+                  "label": "รหัสตำแหน่ง",
+                  "widget": "hidden"
+                },
+                {
+                  "name": "label",
+                  "label": "หัวข้ออ้างอิง",
+                  "widget": "hidden"
+                },
+                {
+                  "name": "text",
+                  "label": "ข้อความ",
+                  "widget": "text"
+                }
+              ]
+            },
+            {
+              "name": "images",
+              "label": "ภาพประกอบ",
+              "widget": "list",
+              "allow_add": false,
+              "allow_delete": false,
+              "summary": "{{fields.alt}}",
+              "fields": [
+                {
+                  "name": "id",
+                  "label": "รหัสตำแหน่ง",
+                  "widget": "hidden"
+                },
+                {
+                  "name": "url",
+                  "label": "รูปภาพ",
+                  "widget": "image"
+                },
+                {
+                  "name": "alt",
+                  "label": "คำอธิบายภาพ",
+                  "widget": "string"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "classroom-research",
+          "label": "รายงานวิจัยในชั้นเรียน",
+          "file": "content/classroom-research.json",
+          "fields": [
+            {
+              "name": "title",
+              "label": "ชื่อรายการในหลังบ้าน",
+              "widget": "string"
+            },
+            {
+              "name": "texts",
+              "label": "ข้อความบนหน้าเว็บ",
+              "widget": "list",
+              "allow_add": false,
+              "allow_delete": false,
+              "summary": "{{fields.label}}",
+              "fields": [
+                {
+                  "name": "id",
+                  "label": "รหัสตำแหน่ง",
+                  "widget": "hidden"
+                },
+                {
+                  "name": "label",
+                  "label": "หัวข้ออ้างอิง",
+                  "widget": "hidden"
+                },
+                {
+                  "name": "text",
+                  "label": "ข้อความ",
+                  "widget": "text"
+                }
+              ]
+            },
+            {
+              "name": "images",
+              "label": "ภาพประกอบ",
+              "widget": "list",
+              "allow_add": false,
+              "allow_delete": false,
+              "summary": "{{fields.alt}}",
+              "fields": [
+                {
+                  "name": "id",
+                  "label": "รหัสตำแหน่ง",
+                  "widget": "hidden"
+                },
+                {
+                  "name": "url",
+                  "label": "รูปภาพ",
+                  "widget": "image"
+                },
+                {
+                  "name": "alt",
+                  "label": "คำอธิบายภาพ",
+                  "widget": "string"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "community-books-health",
+          "label": "มุมอ่านสร้างสุขภาพ ณ รพ.สต.",
+          "file": "content/community-books-health.json",
+          "fields": [
+            {
+              "name": "title",
+              "label": "ชื่อรายการในหลังบ้าน",
+              "widget": "string"
+            },
+            {
+              "name": "texts",
+              "label": "ข้อความบนหน้าเว็บ",
+              "widget": "list",
+              "allow_add": false,
+              "allow_delete": false,
+              "summary": "{{fields.label}}",
+              "fields": [
+                {
+                  "name": "id",
+                  "label": "รหัสตำแหน่ง",
+                  "widget": "hidden"
+                },
+                {
+                  "name": "label",
+                  "label": "หัวข้ออ้างอิง",
+                  "widget": "hidden"
+                },
+                {
+                  "name": "text",
+                  "label": "ข้อความ",
+                  "widget": "text"
+                }
+              ]
+            },
+            {
+              "name": "images",
+              "label": "ภาพประกอบ",
+              "widget": "list",
+              "allow_add": false,
+              "allow_delete": false,
+              "summary": "{{fields.alt}}",
+              "fields": [
+                {
+                  "name": "id",
+                  "label": "รหัสตำแหน่ง",
+                  "widget": "hidden"
+                },
+                {
+                  "name": "url",
+                  "label": "รูปภาพ",
+                  "widget": "image"
+                },
+                {
+                  "name": "alt",
+                  "label": "คำอธิบายภาพ",
+                  "widget": "string"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "community-books-massage",
+          "label": "มุมอ่านภูมิปัญญาไทย ณ กลุ่มนวดแผนไทย",
+          "file": "content/community-books-massage.json",
+          "fields": [
+            {
+              "name": "title",
+              "label": "ชื่อรายการในหลังบ้าน",
+              "widget": "string"
+            },
+            {
+              "name": "texts",
+              "label": "ข้อความบนหน้าเว็บ",
+              "widget": "list",
+              "allow_add": false,
+              "allow_delete": false,
+              "summary": "{{fields.label}}",
+              "fields": [
+                {
+                  "name": "id",
+                  "label": "รหัสตำแหน่ง",
+                  "widget": "hidden"
+                },
+                {
+                  "name": "label",
+                  "label": "หัวข้ออ้างอิง",
+                  "widget": "hidden"
+                },
+                {
+                  "name": "text",
+                  "label": "ข้อความ",
+                  "widget": "text"
+                }
+              ]
+            },
+            {
+              "name": "images",
+              "label": "ภาพประกอบ",
+              "widget": "list",
+              "allow_add": false,
+              "allow_delete": false,
+              "summary": "{{fields.alt}}",
+              "fields": [
+                {
+                  "name": "id",
+                  "label": "รหัสตำแหน่ง",
+                  "widget": "hidden"
+                },
+                {
+                  "name": "url",
+                  "label": "รูปภาพ",
+                  "widget": "image"
+                },
+                {
+                  "name": "alt",
+                  "label": "คำอธิบายภาพ",
+                  "widget": "string"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "community-books",
+          "label": "มุมหนังสือชุมชนออนไลน์",
+          "file": "content/community-books.json",
+          "fields": [
+            {
+              "name": "title",
+              "label": "ชื่อรายการในหลังบ้าน",
+              "widget": "string"
+            },
+            {
+              "name": "texts",
+              "label": "ข้อความบนหน้าเว็บ",
+              "widget": "list",
+              "allow_add": false,
+              "allow_delete": false,
+              "summary": "{{fields.label}}",
+              "fields": [
+                {
+                  "name": "id",
+                  "label": "รหัสตำแหน่ง",
+                  "widget": "hidden"
+                },
+                {
+                  "name": "label",
+                  "label": "หัวข้ออ้างอิง",
+                  "widget": "hidden"
+                },
+                {
+                  "name": "text",
+                  "label": "ข้อความ",
+                  "widget": "text"
+                }
+              ]
+            },
+            {
+              "name": "images",
+              "label": "ภาพประกอบ",
+              "widget": "list",
+              "allow_add": false,
+              "allow_delete": false,
+              "summary": "{{fields.alt}}",
+              "fields": [
+                {
+                  "name": "id",
+                  "label": "รหัสตำแหน่ง",
+                  "widget": "hidden"
+                },
+                {
+                  "name": "url",
+                  "label": "รูปภาพ",
+                  "widget": "image"
+                },
+                {
+                  "name": "alt",
+                  "label": "คำอธิบายภาพ",
+                  "widget": "string"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "community-development",
+          "label": "การศึกษาเพื่อพัฒนาสังคมและชุมชน",
+          "file": "content/community-development.json",
+          "fields": [
+            {
+              "name": "title",
+              "label": "ชื่อรายการในหลังบ้าน",
+              "widget": "string"
+            },
+            {
+              "name": "texts",
+              "label": "ข้อความบนหน้าเว็บ",
+              "widget": "list",
+              "allow_add": false,
+              "allow_delete": false,
+              "summary": "{{fields.label}}",
+              "fields": [
+                {
+                  "name": "id",
+                  "label": "รหัสตำแหน่ง",
+                  "widget": "hidden"
+                },
+                {
+                  "name": "label",
+                  "label": "หัวข้ออ้างอิง",
+                  "widget": "hidden"
+                },
+                {
+                  "name": "text",
+                  "label": "ข้อความ",
+                  "widget": "text"
+                }
+              ]
+            },
+            {
+              "name": "images",
+              "label": "ภาพประกอบ",
+              "widget": "list",
+              "allow_add": false,
+              "allow_delete": false,
+              "summary": "{{fields.alt}}",
+              "fields": [
+                {
+                  "name": "id",
+                  "label": "รหัสตำแหน่ง",
+                  "widget": "hidden"
+                },
+                {
+                  "name": "url",
+                  "label": "รูปภาพ",
+                  "widget": "image"
+                },
+                {
+                  "name": "alt",
+                  "label": "คำอธิบายภาพ",
+                  "widget": "string"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "community-learning",
+          "label": "แหล่งเรียนรู้ชุมชน",
+          "file": "content/community-learning.json",
+          "fields": [
+            {
+              "name": "title",
+              "label": "ชื่อรายการในหลังบ้าน",
+              "widget": "string"
+            },
+            {
+              "name": "texts",
+              "label": "ข้อความบนหน้าเว็บ",
+              "widget": "list",
+              "allow_add": false,
+              "allow_delete": false,
+              "summary": "{{fields.label}}",
+              "fields": [
+                {
+                  "name": "id",
+                  "label": "รหัสตำแหน่ง",
+                  "widget": "hidden"
+                },
+                {
+                  "name": "label",
+                  "label": "หัวข้ออ้างอิง",
+                  "widget": "hidden"
+                },
+                {
+                  "name": "text",
+                  "label": "ข้อความ",
+                  "widget": "text"
+                }
+              ]
+            },
+            {
+              "name": "images",
+              "label": "ภาพประกอบ",
+              "widget": "list",
+              "allow_add": false,
+              "allow_delete": false,
+              "summary": "{{fields.alt}}",
+              "fields": [
+                {
+                  "name": "id",
+                  "label": "รหัสตำแหน่ง",
+                  "widget": "hidden"
+                },
+                {
+                  "name": "url",
+                  "label": "รูปภาพ",
+                  "widget": "image"
+                },
+                {
+                  "name": "alt",
+                  "label": "คำอธิบายภาพ",
+                  "widget": "string"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "community-poster-health",
+          "label": "ป้าย A4 มุมอ่านสร้างสุขภาพ",
+          "file": "content/community-poster-health.json",
+          "fields": [
+            {
+              "name": "title",
+              "label": "ชื่อรายการในหลังบ้าน",
+              "widget": "string"
+            },
+            {
+              "name": "texts",
+              "label": "ข้อความบนหน้าเว็บ",
+              "widget": "list",
+              "allow_add": false,
+              "allow_delete": false,
+              "summary": "{{fields.label}}",
+              "fields": [
+                {
+                  "name": "id",
+                  "label": "รหัสตำแหน่ง",
+                  "widget": "hidden"
+                },
+                {
+                  "name": "label",
+                  "label": "หัวข้ออ้างอิง",
+                  "widget": "hidden"
+                },
+                {
+                  "name": "text",
+                  "label": "ข้อความ",
+                  "widget": "text"
+                }
+              ]
+            },
+            {
+              "name": "images",
+              "label": "ภาพประกอบ",
+              "widget": "list",
+              "allow_add": false,
+              "allow_delete": false,
+              "summary": "{{fields.alt}}",
+              "fields": [
+                {
+                  "name": "id",
+                  "label": "รหัสตำแหน่ง",
+                  "widget": "hidden"
+                },
+                {
+                  "name": "url",
+                  "label": "รูปภาพ",
+                  "widget": "image"
+                },
+                {
+                  "name": "alt",
+                  "label": "คำอธิบายภาพ",
+                  "widget": "string"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "community-poster-massage",
+          "label": "ป้าย A4 มุมอ่านภูมิปัญญาไทย",
+          "file": "content/community-poster-massage.json",
+          "fields": [
+            {
+              "name": "title",
+              "label": "ชื่อรายการในหลังบ้าน",
+              "widget": "string"
+            },
+            {
+              "name": "texts",
+              "label": "ข้อความบนหน้าเว็บ",
+              "widget": "list",
+              "allow_add": false,
+              "allow_delete": false,
+              "summary": "{{fields.label}}",
+              "fields": [
+                {
+                  "name": "id",
+                  "label": "รหัสตำแหน่ง",
+                  "widget": "hidden"
+                },
+                {
+                  "name": "label",
+                  "label": "หัวข้ออ้างอิง",
+                  "widget": "hidden"
+                },
+                {
+                  "name": "text",
+                  "label": "ข้อความ",
+                  "widget": "text"
+                }
+              ]
+            },
+            {
+              "name": "images",
+              "label": "ภาพประกอบ",
+              "widget": "list",
+              "allow_add": false,
+              "allow_delete": false,
+              "summary": "{{fields.alt}}",
+              "fields": [
+                {
+                  "name": "id",
+                  "label": "รหัสตำแหน่ง",
+                  "widget": "hidden"
+                },
+                {
+                  "name": "url",
+                  "label": "รูปภาพ",
+                  "widget": "image"
+                },
+                {
+                  "name": "alt",
+                  "label": "คำอธิบายภาพ",
+                  "widget": "string"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "curriculum-2551",
+          "label": "หลักสูตร 2551",
+          "file": "content/curriculum-2551.json",
+          "fields": [
+            {
+              "name": "title",
+              "label": "ชื่อรายการในหลังบ้าน",
+              "widget": "string"
+            },
+            {
+              "name": "texts",
+              "label": "ข้อความบนหน้าเว็บ",
+              "widget": "list",
+              "allow_add": false,
+              "allow_delete": false,
+              "summary": "{{fields.label}}",
+              "fields": [
+                {
+                  "name": "id",
+                  "label": "รหัสตำแหน่ง",
+                  "widget": "hidden"
+                },
+                {
+                  "name": "label",
+                  "label": "หัวข้ออ้างอิง",
+                  "widget": "hidden"
+                },
+                {
+                  "name": "text",
+                  "label": "ข้อความ",
+                  "widget": "text"
+                }
+              ]
+            },
+            {
+              "name": "images",
+              "label": "ภาพประกอบ",
+              "widget": "list",
+              "allow_add": false,
+              "allow_delete": false,
+              "summary": "{{fields.alt}}",
+              "fields": [
+                {
+                  "name": "id",
+                  "label": "รหัสตำแหน่ง",
+                  "widget": "hidden"
+                },
+                {
+                  "name": "url",
+                  "label": "รูปภาพ",
+                  "widget": "image"
+                },
+                {
+                  "name": "alt",
+                  "label": "คำอธิบายภาพ",
+                  "widget": "string"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "curriculum-2567",
+          "label": "หลักสูตร 2567",
+          "file": "content/curriculum-2567.json",
+          "fields": [
+            {
+              "name": "title",
+              "label": "ชื่อรายการในหลังบ้าน",
+              "widget": "string"
+            },
+            {
+              "name": "texts",
+              "label": "ข้อความบนหน้าเว็บ",
+              "widget": "list",
+              "allow_add": false,
+              "allow_delete": false,
+              "summary": "{{fields.label}}",
+              "fields": [
+                {
+                  "name": "id",
+                  "label": "รหัสตำแหน่ง",
+                  "widget": "hidden"
+                },
+                {
+                  "name": "label",
+                  "label": "หัวข้ออ้างอิง",
+                  "widget": "hidden"
+                },
+                {
+                  "name": "text",
+                  "label": "ข้อความ",
+                  "widget": "text"
+                }
+              ]
+            },
+            {
+              "name": "images",
+              "label": "ภาพประกอบ",
+              "widget": "list",
+              "allow_add": false,
+              "allow_delete": false,
+              "summary": "{{fields.alt}}",
+              "fields": [
+                {
+                  "name": "id",
+                  "label": "รหัสตำแหน่ง",
+                  "widget": "hidden"
+                },
+                {
+                  "name": "url",
+                  "label": "รูปภาพ",
+                  "widget": "image"
+                },
+                {
+                  "name": "alt",
+                  "label": "คำอธิบายภาพ",
+                  "widget": "string"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "digital-library",
+          "label": "ห้องสมุดดิจิทัล",
+          "file": "content/digital-library.json",
+          "fields": [
+            {
+              "name": "title",
+              "label": "ชื่อรายการในหลังบ้าน",
+              "widget": "string"
+            },
+            {
+              "name": "texts",
+              "label": "ข้อความบนหน้าเว็บ",
+              "widget": "list",
+              "allow_add": false,
+              "allow_delete": false,
+              "summary": "{{fields.label}}",
+              "fields": [
+                {
+                  "name": "id",
+                  "label": "รหัสตำแหน่ง",
+                  "widget": "hidden"
+                },
+                {
+                  "name": "label",
+                  "label": "หัวข้ออ้างอิง",
+                  "widget": "hidden"
+                },
+                {
+                  "name": "text",
+                  "label": "ข้อความ",
+                  "widget": "text"
+                }
+              ]
+            },
+            {
+              "name": "images",
+              "label": "ภาพประกอบ",
+              "widget": "list",
+              "allow_add": false,
+              "allow_delete": false,
+              "summary": "{{fields.alt}}",
+              "fields": [
+                {
+                  "name": "id",
+                  "label": "รหัสตำแหน่ง",
+                  "widget": "hidden"
+                },
+                {
+                  "name": "url",
+                  "label": "รูปภาพ",
+                  "widget": "image"
+                },
+                {
+                  "name": "alt",
+                  "label": "คำอธิบายภาพ",
+                  "widget": "string"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "etv-2551",
+          "label": "คลังสื่อการเรียนรู้ หลักสูตร พ.ศ. 2551",
+          "file": "content/etv-2551.json",
+          "fields": [
+            {
+              "name": "title",
+              "label": "ชื่อรายการในหลังบ้าน",
+              "widget": "string"
+            },
+            {
+              "name": "texts",
+              "label": "ข้อความบนหน้าเว็บ",
+              "widget": "list",
+              "allow_add": false,
+              "allow_delete": false,
+              "summary": "{{fields.label}}",
+              "fields": [
+                {
+                  "name": "id",
+                  "label": "รหัสตำแหน่ง",
+                  "widget": "hidden"
+                },
+                {
+                  "name": "label",
+                  "label": "หัวข้ออ้างอิง",
+                  "widget": "hidden"
+                },
+                {
+                  "name": "text",
+                  "label": "ข้อความ",
+                  "widget": "text"
+                }
+              ]
+            },
+            {
+              "name": "images",
+              "label": "ภาพประกอบ",
+              "widget": "list",
+              "allow_add": false,
+              "allow_delete": false,
+              "summary": "{{fields.alt}}",
+              "fields": [
+                {
+                  "name": "id",
+                  "label": "รหัสตำแหน่ง",
+                  "widget": "hidden"
+                },
+                {
+                  "name": "url",
+                  "label": "รูปภาพ",
+                  "widget": "image"
+                },
+                {
+                  "name": "alt",
+                  "label": "คำอธิบายภาพ",
+                  "widget": "string"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "etv-2567",
+          "label": "คลังสื่อการเรียนรู้ หลักสูตร พ.ศ. 2567",
+          "file": "content/etv-2567.json",
+          "fields": [
+            {
+              "name": "title",
+              "label": "ชื่อรายการในหลังบ้าน",
+              "widget": "string"
+            },
+            {
+              "name": "texts",
+              "label": "ข้อความบนหน้าเว็บ",
+              "widget": "list",
+              "allow_add": false,
+              "allow_delete": false,
+              "summary": "{{fields.label}}",
+              "fields": [
+                {
+                  "name": "id",
+                  "label": "รหัสตำแหน่ง",
+                  "widget": "hidden"
+                },
+                {
+                  "name": "label",
+                  "label": "หัวข้ออ้างอิง",
+                  "widget": "hidden"
+                },
+                {
+                  "name": "text",
+                  "label": "ข้อความ",
+                  "widget": "text"
+                }
+              ]
+            },
+            {
+              "name": "images",
+              "label": "ภาพประกอบ",
+              "widget": "list",
+              "allow_add": false,
+              "allow_delete": false,
+              "summary": "{{fields.alt}}",
+              "fields": [
+                {
+                  "name": "id",
+                  "label": "รหัสตำแหน่ง",
+                  "widget": "hidden"
+                },
+                {
+                  "name": "url",
+                  "label": "รูปภาพ",
+                  "widget": "image"
+                },
+                {
+                  "name": "alt",
+                  "label": "คำอธิบายภาพ",
+                  "widget": "string"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "etv",
+          "label": "คลังสื่อการเรียนรู้ ETV",
+          "file": "content/etv.json",
+          "fields": [
+            {
+              "name": "title",
+              "label": "ชื่อรายการในหลังบ้าน",
+              "widget": "string"
+            },
+            {
+              "name": "texts",
+              "label": "ข้อความบนหน้าเว็บ",
+              "widget": "list",
+              "allow_add": false,
+              "allow_delete": false,
+              "summary": "{{fields.label}}",
+              "fields": [
+                {
+                  "name": "id",
+                  "label": "รหัสตำแหน่ง",
+                  "widget": "hidden"
+                },
+                {
+                  "name": "label",
+                  "label": "หัวข้ออ้างอิง",
+                  "widget": "hidden"
+                },
+                {
+                  "name": "text",
+                  "label": "ข้อความ",
+                  "widget": "text"
+                }
+              ]
+            },
+            {
+              "name": "images",
+              "label": "ภาพประกอบ",
+              "widget": "list",
+              "allow_add": false,
+              "allow_delete": false,
+              "summary": "{{fields.alt}}",
+              "fields": [
+                {
+                  "name": "id",
+                  "label": "รหัสตำแหน่ง",
+                  "widget": "hidden"
+                },
+                {
+                  "name": "url",
+                  "label": "รูปภาพ",
+                  "widget": "image"
+                },
+                {
+                  "name": "alt",
+                  "label": "คำอธิบายภาพ",
+                  "widget": "string"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "index",
+          "label": "หน้าแรก",
+          "file": "content/index.json",
+          "fields": [
+            {
+              "name": "title",
+              "label": "ชื่อรายการในหลังบ้าน",
+              "widget": "string"
+            },
+            {
+              "name": "texts",
+              "label": "ข้อความบนหน้าเว็บ",
+              "widget": "list",
+              "allow_add": false,
+              "allow_delete": false,
+              "summary": "{{fields.label}}",
+              "fields": [
+                {
+                  "name": "id",
+                  "label": "รหัสตำแหน่ง",
+                  "widget": "hidden"
+                },
+                {
+                  "name": "label",
+                  "label": "หัวข้ออ้างอิง",
+                  "widget": "hidden"
+                },
+                {
+                  "name": "text",
+                  "label": "ข้อความ",
+                  "widget": "text"
+                }
+              ]
+            },
+            {
+              "name": "images",
+              "label": "ภาพประกอบ",
+              "widget": "list",
+              "allow_add": false,
+              "allow_delete": false,
+              "summary": "{{fields.alt}}",
+              "fields": [
+                {
+                  "name": "id",
+                  "label": "รหัสตำแหน่ง",
+                  "widget": "hidden"
+                },
+                {
+                  "name": "url",
+                  "label": "รูปภาพ",
+                  "widget": "image"
+                },
+                {
+                  "name": "alt",
+                  "label": "คำอธิบายภาพ",
+                  "widget": "string"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "learning",
+          "label": "การเรียนรู้",
+          "file": "content/learning.json",
+          "fields": [
+            {
+              "name": "title",
+              "label": "ชื่อรายการในหลังบ้าน",
+              "widget": "string"
+            },
+            {
+              "name": "texts",
+              "label": "ข้อความบนหน้าเว็บ",
+              "widget": "list",
+              "allow_add": false,
+              "allow_delete": false,
+              "summary": "{{fields.label}}",
+              "fields": [
+                {
+                  "name": "id",
+                  "label": "รหัสตำแหน่ง",
+                  "widget": "hidden"
+                },
+                {
+                  "name": "label",
+                  "label": "หัวข้ออ้างอิง",
+                  "widget": "hidden"
+                },
+                {
+                  "name": "text",
+                  "label": "ข้อความ",
+                  "widget": "text"
+                }
+              ]
+            },
+            {
+              "name": "images",
+              "label": "ภาพประกอบ",
+              "widget": "list",
+              "allow_add": false,
+              "allow_delete": false,
+              "summary": "{{fields.alt}}",
+              "fields": [
+                {
+                  "name": "id",
+                  "label": "รหัสตำแหน่ง",
+                  "widget": "hidden"
+                },
+                {
+                  "name": "url",
+                  "label": "รูปภาพ",
+                  "widget": "image"
+                },
+                {
+                  "name": "alt",
+                  "label": "คำอธิบายภาพ",
+                  "widget": "string"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "life-skills",
+          "label": "การศึกษาเพื่อพัฒนาทักษะชีวิต",
+          "file": "content/life-skills.json",
+          "fields": [
+            {
+              "name": "title",
+              "label": "ชื่อรายการในหลังบ้าน",
+              "widget": "string"
+            },
+            {
+              "name": "texts",
+              "label": "ข้อความบนหน้าเว็บ",
+              "widget": "list",
+              "allow_add": false,
+              "allow_delete": false,
+              "summary": "{{fields.label}}",
+              "fields": [
+                {
+                  "name": "id",
+                  "label": "รหัสตำแหน่ง",
+                  "widget": "hidden"
+                },
+                {
+                  "name": "label",
+                  "label": "หัวข้ออ้างอิง",
+                  "widget": "hidden"
+                },
+                {
+                  "name": "text",
+                  "label": "ข้อความ",
+                  "widget": "text"
+                }
+              ]
+            },
+            {
+              "name": "images",
+              "label": "ภาพประกอบ",
+              "widget": "list",
+              "allow_add": false,
+              "allow_delete": false,
+              "summary": "{{fields.alt}}",
+              "fields": [
+                {
+                  "name": "id",
+                  "label": "รหัสตำแหน่ง",
+                  "widget": "hidden"
+                },
+                {
+                  "name": "url",
+                  "label": "รูปภาพ",
+                  "widget": "image"
+                },
+                {
+                  "name": "alt",
+                  "label": "คำอธิบายภาพ",
+                  "widget": "string"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "lifelong",
+          "label": "การเรียนรู้ตลอดชีวิต",
+          "file": "content/lifelong.json",
+          "fields": [
+            {
+              "name": "title",
+              "label": "ชื่อรายการในหลังบ้าน",
+              "widget": "string"
+            },
+            {
+              "name": "texts",
+              "label": "ข้อความบนหน้าเว็บ",
+              "widget": "list",
+              "allow_add": false,
+              "allow_delete": false,
+              "summary": "{{fields.label}}",
+              "fields": [
+                {
+                  "name": "id",
+                  "label": "รหัสตำแหน่ง",
+                  "widget": "hidden"
+                },
+                {
+                  "name": "label",
+                  "label": "หัวข้ออ้างอิง",
+                  "widget": "hidden"
+                },
+                {
+                  "name": "text",
+                  "label": "ข้อความ",
+                  "widget": "text"
+                }
+              ]
+            },
+            {
+              "name": "images",
+              "label": "ภาพประกอบ",
+              "widget": "list",
+              "allow_add": false,
+              "allow_delete": false,
+              "summary": "{{fields.alt}}",
+              "fields": [
+                {
+                  "name": "id",
+                  "label": "รหัสตำแหน่ง",
+                  "widget": "hidden"
+                },
+                {
+                  "name": "url",
+                  "label": "รูปภาพ",
+                  "widget": "image"
+                },
+                {
+                  "name": "alt",
+                  "label": "คำอธิบายภาพ",
+                  "widget": "string"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "massage",
+          "label": "นวดแผนไทยบ้านทุ่งพล้อ",
+          "file": "content/massage.json",
+          "fields": [
+            {
+              "name": "title",
+              "label": "ชื่อรายการในหลังบ้าน",
+              "widget": "string"
+            },
+            {
+              "name": "texts",
+              "label": "ข้อความบนหน้าเว็บ",
+              "widget": "list",
+              "allow_add": false,
+              "allow_delete": false,
+              "summary": "{{fields.label}}",
+              "fields": [
+                {
+                  "name": "id",
+                  "label": "รหัสตำแหน่ง",
+                  "widget": "hidden"
+                },
+                {
+                  "name": "label",
+                  "label": "หัวข้ออ้างอิง",
+                  "widget": "hidden"
+                },
+                {
+                  "name": "text",
+                  "label": "ข้อความ",
+                  "widget": "text"
+                }
+              ]
+            },
+            {
+              "name": "images",
+              "label": "ภาพประกอบ",
+              "widget": "list",
+              "allow_add": false,
+              "allow_delete": false,
+              "summary": "{{fields.alt}}",
+              "fields": [
+                {
+                  "name": "id",
+                  "label": "รหัสตำแหน่ง",
+                  "widget": "hidden"
+                },
+                {
+                  "name": "url",
+                  "label": "รูปภาพ",
+                  "widget": "image"
+                },
+                {
+                  "name": "alt",
+                  "label": "คำอธิบายภาพ",
+                  "widget": "string"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "news",
+          "label": "ประชาสัมพันธ์",
+          "file": "content/news.json",
+          "fields": [
+            {
+              "name": "title",
+              "label": "ชื่อรายการในหลังบ้าน",
+              "widget": "string"
+            },
+            {
+              "name": "texts",
+              "label": "ข้อความบนหน้าเว็บ",
+              "widget": "list",
+              "allow_add": false,
+              "allow_delete": false,
+              "summary": "{{fields.label}}",
+              "fields": [
+                {
+                  "name": "id",
+                  "label": "รหัสตำแหน่ง",
+                  "widget": "hidden"
+                },
+                {
+                  "name": "label",
+                  "label": "หัวข้ออ้างอิง",
+                  "widget": "hidden"
+                },
+                {
+                  "name": "text",
+                  "label": "ข้อความ",
+                  "widget": "text"
+                }
+              ]
+            },
+            {
+              "name": "images",
+              "label": "ภาพประกอบ",
+              "widget": "list",
+              "allow_add": false,
+              "allow_delete": false,
+              "summary": "{{fields.alt}}",
+              "fields": [
+                {
+                  "name": "id",
+                  "label": "รหัสตำแหน่ง",
+                  "widget": "hidden"
+                },
+                {
+                  "name": "url",
+                  "label": "รูปภาพ",
+                  "widget": "image"
+                },
+                {
+                  "name": "alt",
+                  "label": "คำอธิบายภาพ",
+                  "widget": "string"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "online",
+          "label": "ห้องเรียนออนไลน์",
+          "file": "content/online.json",
+          "fields": [
+            {
+              "name": "title",
+              "label": "ชื่อรายการในหลังบ้าน",
+              "widget": "string"
+            },
+            {
+              "name": "texts",
+              "label": "ข้อความบนหน้าเว็บ",
+              "widget": "list",
+              "allow_add": false,
+              "allow_delete": false,
+              "summary": "{{fields.label}}",
+              "fields": [
+                {
+                  "name": "id",
+                  "label": "รหัสตำแหน่ง",
+                  "widget": "hidden"
+                },
+                {
+                  "name": "label",
+                  "label": "หัวข้ออ้างอิง",
+                  "widget": "hidden"
+                },
+                {
+                  "name": "text",
+                  "label": "ข้อความ",
+                  "widget": "text"
+                }
+              ]
+            },
+            {
+              "name": "images",
+              "label": "ภาพประกอบ",
+              "widget": "list",
+              "allow_add": false,
+              "allow_delete": false,
+              "summary": "{{fields.alt}}",
+              "fields": [
+                {
+                  "name": "id",
+                  "label": "รหัสตำแหน่ง",
+                  "widget": "hidden"
+                },
+                {
+                  "name": "url",
+                  "label": "รูปภาพ",
+                  "widget": "image"
+                },
+                {
+                  "name": "alt",
+                  "label": "คำอธิบายภาพ",
+                  "widget": "string"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "qualification",
+          "label": "การเรียนรู้เพื่อคุณวุฒิตามระดับ",
+          "file": "content/qualification.json",
+          "fields": [
+            {
+              "name": "title",
+              "label": "ชื่อรายการในหลังบ้าน",
+              "widget": "string"
+            },
+            {
+              "name": "texts",
+              "label": "ข้อความบนหน้าเว็บ",
+              "widget": "list",
+              "allow_add": false,
+              "allow_delete": false,
+              "summary": "{{fields.label}}",
+              "fields": [
+                {
+                  "name": "id",
+                  "label": "รหัสตำแหน่ง",
+                  "widget": "hidden"
+                },
+                {
+                  "name": "label",
+                  "label": "หัวข้ออ้างอิง",
+                  "widget": "hidden"
+                },
+                {
+                  "name": "text",
+                  "label": "ข้อความ",
+                  "widget": "text"
+                }
+              ]
+            },
+            {
+              "name": "images",
+              "label": "ภาพประกอบ",
+              "widget": "list",
+              "allow_add": false,
+              "allow_delete": false,
+              "summary": "{{fields.alt}}",
+              "fields": [
+                {
+                  "name": "id",
+                  "label": "รหัสตำแหน่ง",
+                  "widget": "hidden"
+                },
+                {
+                  "name": "url",
+                  "label": "รูปภาพ",
+                  "widget": "image"
+                },
+                {
+                  "name": "alt",
+                  "label": "คำอธิบายภาพ",
+                  "widget": "string"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "reading-activities",
+          "label": "กิจกรรมส่งเสริมการอ่านออนไลน์",
+          "file": "content/reading-activities.json",
+          "fields": [
+            {
+              "name": "title",
+              "label": "ชื่อรายการในหลังบ้าน",
+              "widget": "string"
+            },
+            {
+              "name": "texts",
+              "label": "ข้อความบนหน้าเว็บ",
+              "widget": "list",
+              "allow_add": false,
+              "allow_delete": false,
+              "summary": "{{fields.label}}",
+              "fields": [
+                {
+                  "name": "id",
+                  "label": "รหัสตำแหน่ง",
+                  "widget": "hidden"
+                },
+                {
+                  "name": "label",
+                  "label": "หัวข้ออ้างอิง",
+                  "widget": "hidden"
+                },
+                {
+                  "name": "text",
+                  "label": "ข้อความ",
+                  "widget": "text"
+                }
+              ]
+            },
+            {
+              "name": "images",
+              "label": "ภาพประกอบ",
+              "widget": "list",
+              "allow_add": false,
+              "allow_delete": false,
+              "summary": "{{fields.alt}}",
+              "fields": [
+                {
+                  "name": "id",
+                  "label": "รหัสตำแหน่ง",
+                  "widget": "hidden"
+                },
+                {
+                  "name": "url",
+                  "label": "รูปภาพ",
+                  "widget": "image"
+                },
+                {
+                  "name": "alt",
+                  "label": "คำอธิบายภาพ",
+                  "widget": "string"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "reading-connection",
+          "label": "วิธีเชื่อมกิจกรรมอ่านออนไลน์",
+          "file": "content/reading-connection.json",
+          "fields": [
+            {
+              "name": "title",
+              "label": "ชื่อรายการในหลังบ้าน",
+              "widget": "string"
+            },
+            {
+              "name": "texts",
+              "label": "ข้อความบนหน้าเว็บ",
+              "widget": "list",
+              "allow_add": false,
+              "allow_delete": false,
+              "summary": "{{fields.label}}",
+              "fields": [
+                {
+                  "name": "id",
+                  "label": "รหัสตำแหน่ง",
+                  "widget": "hidden"
+                },
+                {
+                  "name": "label",
+                  "label": "หัวข้ออ้างอิง",
+                  "widget": "hidden"
+                },
+                {
+                  "name": "text",
+                  "label": "ข้อความ",
+                  "widget": "text"
+                }
+              ]
+            },
+            {
+              "name": "images",
+              "label": "ภาพประกอบ",
+              "widget": "list",
+              "allow_add": false,
+              "allow_delete": false,
+              "summary": "{{fields.alt}}",
+              "fields": [
+                {
+                  "name": "id",
+                  "label": "รหัสตำแหน่ง",
+                  "widget": "hidden"
+                },
+                {
+                  "name": "url",
+                  "label": "รูปภาพ",
+                  "widget": "image"
+                },
+                {
+                  "name": "alt",
+                  "label": "คำอธิบายภาพ",
+                  "widget": "string"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "reading",
+          "label": "กิจกรรมส่งเสริมการอ่าน",
+          "file": "content/reading.json",
+          "fields": [
+            {
+              "name": "title",
+              "label": "ชื่อรายการในหลังบ้าน",
+              "widget": "string"
+            },
+            {
+              "name": "texts",
+              "label": "ข้อความบนหน้าเว็บ",
+              "widget": "list",
+              "allow_add": false,
+              "allow_delete": false,
+              "summary": "{{fields.label}}",
+              "fields": [
+                {
+                  "name": "id",
+                  "label": "รหัสตำแหน่ง",
+                  "widget": "hidden"
+                },
+                {
+                  "name": "label",
+                  "label": "หัวข้ออ้างอิง",
+                  "widget": "hidden"
+                },
+                {
+                  "name": "text",
+                  "label": "ข้อความ",
+                  "widget": "text"
+                }
+              ]
+            },
+            {
+              "name": "images",
+              "label": "ภาพประกอบ",
+              "widget": "list",
+              "allow_add": false,
+              "allow_delete": false,
+              "summary": "{{fields.alt}}",
+              "fields": [
+                {
+                  "name": "id",
+                  "label": "รหัสตำแหน่ง",
+                  "widget": "hidden"
+                },
+                {
+                  "name": "url",
+                  "label": "รูปภาพ",
+                  "widget": "image"
+                },
+                {
+                  "name": "alt",
+                  "label": "คำอธิบายภาพ",
+                  "widget": "string"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "results-2569",
+          "label": "ปีงบประมาณ 2569",
+          "file": "content/results-2569.json",
+          "fields": [
+            {
+              "name": "title",
+              "label": "ชื่อรายการในหลังบ้าน",
+              "widget": "string"
+            },
+            {
+              "name": "texts",
+              "label": "ข้อความบนหน้าเว็บ",
+              "widget": "list",
+              "allow_add": false,
+              "allow_delete": false,
+              "summary": "{{fields.label}}",
+              "fields": [
+                {
+                  "name": "id",
+                  "label": "รหัสตำแหน่ง",
+                  "widget": "hidden"
+                },
+                {
+                  "name": "label",
+                  "label": "หัวข้ออ้างอิง",
+                  "widget": "hidden"
+                },
+                {
+                  "name": "text",
+                  "label": "ข้อความ",
+                  "widget": "text"
+                }
+              ]
+            },
+            {
+              "name": "images",
+              "label": "ภาพประกอบ",
+              "widget": "list",
+              "allow_add": false,
+              "allow_delete": false,
+              "summary": "{{fields.alt}}",
+              "fields": [
+                {
+                  "name": "id",
+                  "label": "รหัสตำแหน่ง",
+                  "widget": "hidden"
+                },
+                {
+                  "name": "url",
+                  "label": "รูปภาพ",
+                  "widget": "image"
+                },
+                {
+                  "name": "alt",
+                  "label": "คำอธิบายภาพ",
+                  "widget": "string"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "results-2570",
+          "label": "ปีงบประมาณ 2570",
+          "file": "content/results-2570.json",
+          "fields": [
+            {
+              "name": "title",
+              "label": "ชื่อรายการในหลังบ้าน",
+              "widget": "string"
+            },
+            {
+              "name": "texts",
+              "label": "ข้อความบนหน้าเว็บ",
+              "widget": "list",
+              "allow_add": false,
+              "allow_delete": false,
+              "summary": "{{fields.label}}",
+              "fields": [
+                {
+                  "name": "id",
+                  "label": "รหัสตำแหน่ง",
+                  "widget": "hidden"
+                },
+                {
+                  "name": "label",
+                  "label": "หัวข้ออ้างอิง",
+                  "widget": "hidden"
+                },
+                {
+                  "name": "text",
+                  "label": "ข้อความ",
+                  "widget": "text"
+                }
+              ]
+            },
+            {
+              "name": "images",
+              "label": "ภาพประกอบ",
+              "widget": "list",
+              "allow_add": false,
+              "allow_delete": false,
+              "summary": "{{fields.alt}}",
+              "fields": [
+                {
+                  "name": "id",
+                  "label": "รหัสตำแหน่ง",
+                  "widget": "hidden"
+                },
+                {
+                  "name": "url",
+                  "label": "รูปภาพ",
+                  "widget": "image"
+                },
+                {
+                  "name": "alt",
+                  "label": "คำอธิบายภาพ",
+                  "widget": "string"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "results",
+          "label": "ผลการดำเนินงาน",
+          "file": "content/results.json",
+          "fields": [
+            {
+              "name": "title",
+              "label": "ชื่อรายการในหลังบ้าน",
+              "widget": "string"
+            },
+            {
+              "name": "texts",
+              "label": "ข้อความบนหน้าเว็บ",
+              "widget": "list",
+              "allow_add": false,
+              "allow_delete": false,
+              "summary": "{{fields.label}}",
+              "fields": [
+                {
+                  "name": "id",
+                  "label": "รหัสตำแหน่ง",
+                  "widget": "hidden"
+                },
+                {
+                  "name": "label",
+                  "label": "หัวข้ออ้างอิง",
+                  "widget": "hidden"
+                },
+                {
+                  "name": "text",
+                  "label": "ข้อความ",
+                  "widget": "text"
+                }
+              ]
+            },
+            {
+              "name": "images",
+              "label": "ภาพประกอบ",
+              "widget": "list",
+              "allow_add": false,
+              "allow_delete": false,
+              "summary": "{{fields.alt}}",
+              "fields": [
+                {
+                  "name": "id",
+                  "label": "รหัสตำแหน่ง",
+                  "widget": "hidden"
+                },
+                {
+                  "name": "url",
+                  "label": "รูปภาพ",
+                  "widget": "image"
+                },
+                {
+                  "name": "alt",
+                  "label": "คำอธิบายภาพ",
+                  "widget": "string"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "school",
+          "label": "ข้อมูลสถานศึกษา",
+          "file": "content/school.json",
+          "fields": [
+            {
+              "name": "title",
+              "label": "ชื่อรายการในหลังบ้าน",
+              "widget": "string"
+            },
+            {
+              "name": "texts",
+              "label": "ข้อความบนหน้าเว็บ",
+              "widget": "list",
+              "allow_add": false,
+              "allow_delete": false,
+              "summary": "{{fields.label}}",
+              "fields": [
+                {
+                  "name": "id",
+                  "label": "รหัสตำแหน่ง",
+                  "widget": "hidden"
+                },
+                {
+                  "name": "label",
+                  "label": "หัวข้ออ้างอิง",
+                  "widget": "hidden"
+                },
+                {
+                  "name": "text",
+                  "label": "ข้อความ",
+                  "widget": "text"
+                }
+              ]
+            },
+            {
+              "name": "images",
+              "label": "ภาพประกอบ",
+              "widget": "list",
+              "allow_add": false,
+              "allow_delete": false,
+              "summary": "{{fields.alt}}",
+              "fields": [
+                {
+                  "name": "id",
+                  "label": "รหัสตำแหน่ง",
+                  "widget": "hidden"
+                },
+                {
+                  "name": "url",
+                  "label": "รูปภาพ",
+                  "widget": "image"
+                },
+                {
+                  "name": "alt",
+                  "label": "คำอธิบายภาพ",
+                  "widget": "string"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "self-development",
+          "label": "การเรียนรู้เพื่อการพัฒนาตนเอง",
+          "file": "content/self-development.json",
+          "fields": [
+            {
+              "name": "title",
+              "label": "ชื่อรายการในหลังบ้าน",
+              "widget": "string"
+            },
+            {
+              "name": "texts",
+              "label": "ข้อความบนหน้าเว็บ",
+              "widget": "list",
+              "allow_add": false,
+              "allow_delete": false,
+              "summary": "{{fields.label}}",
+              "fields": [
+                {
+                  "name": "id",
+                  "label": "รหัสตำแหน่ง",
+                  "widget": "hidden"
+                },
+                {
+                  "name": "label",
+                  "label": "หัวข้ออ้างอิง",
+                  "widget": "hidden"
+                },
+                {
+                  "name": "text",
+                  "label": "ข้อความ",
+                  "widget": "text"
+                }
+              ]
+            },
+            {
+              "name": "images",
+              "label": "ภาพประกอบ",
+              "widget": "list",
+              "allow_add": false,
+              "allow_delete": false,
+              "summary": "{{fields.alt}}",
+              "fields": [
+                {
+                  "name": "id",
+                  "label": "รหัสตำแหน่ง",
+                  "widget": "hidden"
+                },
+                {
+                  "name": "url",
+                  "label": "รูปภาพ",
+                  "widget": "image"
+                },
+                {
+                  "name": "alt",
+                  "label": "คำอธิบายภาพ",
+                  "widget": "string"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "staff-performance",
+          "label": "สรุปผลการปฏิบัติงานพนักงานราชการ",
+          "file": "content/staff-performance.json",
+          "fields": [
+            {
+              "name": "title",
+              "label": "ชื่อรายการในหลังบ้าน",
+              "widget": "string"
+            },
+            {
+              "name": "texts",
+              "label": "ข้อความบนหน้าเว็บ",
+              "widget": "list",
+              "allow_add": false,
+              "allow_delete": false,
+              "summary": "{{fields.label}}",
+              "fields": [
+                {
+                  "name": "id",
+                  "label": "รหัสตำแหน่ง",
+                  "widget": "hidden"
+                },
+                {
+                  "name": "label",
+                  "label": "หัวข้ออ้างอิง",
+                  "widget": "hidden"
+                },
+                {
+                  "name": "text",
+                  "label": "ข้อความ",
+                  "widget": "text"
+                }
+              ]
+            },
+            {
+              "name": "images",
+              "label": "ภาพประกอบ",
+              "widget": "list",
+              "allow_add": false,
+              "allow_delete": false,
+              "summary": "{{fields.alt}}",
+              "fields": [
+                {
+                  "name": "id",
+                  "label": "รหัสตำแหน่ง",
+                  "widget": "hidden"
+                },
+                {
+                  "name": "url",
+                  "label": "รูปภาพ",
+                  "widget": "image"
+                },
+                {
+                  "name": "alt",
+                  "label": "คำอธิบายภาพ",
+                  "widget": "string"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "sufficiency",
+          "label": "การเรียนรู้ตามหลักปรัชญาของเศรษฐกิจพอเพียง",
+          "file": "content/sufficiency.json",
+          "fields": [
+            {
+              "name": "title",
+              "label": "ชื่อรายการในหลังบ้าน",
+              "widget": "string"
+            },
+            {
+              "name": "texts",
+              "label": "ข้อความบนหน้าเว็บ",
+              "widget": "list",
+              "allow_add": false,
+              "allow_delete": false,
+              "summary": "{{fields.label}}",
+              "fields": [
+                {
+                  "name": "id",
+                  "label": "รหัสตำแหน่ง",
+                  "widget": "hidden"
+                },
+                {
+                  "name": "label",
+                  "label": "หัวข้ออ้างอิง",
+                  "widget": "hidden"
+                },
+                {
+                  "name": "text",
+                  "label": "ข้อความ",
+                  "widget": "text"
+                }
+              ]
+            },
+            {
+              "name": "images",
+              "label": "ภาพประกอบ",
+              "widget": "list",
+              "allow_add": false,
+              "allow_delete": false,
+              "summary": "{{fields.alt}}",
+              "fields": [
+                {
+                  "name": "id",
+                  "label": "รหัสตำแหน่ง",
+                  "widget": "hidden"
+                },
+                {
+                  "name": "url",
+                  "label": "รูปภาพ",
+                  "widget": "image"
+                },
+                {
+                  "name": "alt",
+                  "label": "คำอธิบายภาพ",
+                  "widget": "string"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "weaving",
+          "label": "กลุ่มสตรีทอผ้าบ้านแม่ราก",
+          "file": "content/weaving.json",
+          "fields": [
+            {
+              "name": "title",
+              "label": "ชื่อรายการในหลังบ้าน",
+              "widget": "string"
+            },
+            {
+              "name": "texts",
+              "label": "ข้อความบนหน้าเว็บ",
+              "widget": "list",
+              "allow_add": false,
+              "allow_delete": false,
+              "summary": "{{fields.label}}",
+              "fields": [
+                {
+                  "name": "id",
+                  "label": "รหัสตำแหน่ง",
+                  "widget": "hidden"
+                },
+                {
+                  "name": "label",
+                  "label": "หัวข้ออ้างอิง",
+                  "widget": "hidden"
+                },
+                {
+                  "name": "text",
+                  "label": "ข้อความ",
+                  "widget": "text"
+                }
+              ]
+            },
+            {
+              "name": "images",
+              "label": "ภาพประกอบ",
+              "widget": "list",
+              "allow_add": false,
+              "allow_delete": false,
+              "summary": "{{fields.alt}}",
+              "fields": [
+                {
+                  "name": "id",
+                  "label": "รหัสตำแหน่ง",
+                  "widget": "hidden"
+                },
+                {
+                  "name": "url",
+                  "label": "รูปภาพ",
+                  "widget": "image"
+                },
+                {
+                  "name": "alt",
+                  "label": "คำอธิบายภาพ",
+                  "widget": "string"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "library",
+      "label": "ห้องสมุดดิจิทัล",
+      "files": [
+        {
+          "name": "library",
+          "label": "ห้องสมุดดิจิทัล",
+          "file": "site/digital-library-books.json",
+          "fields": [
+            {
+              "name": "updatedAt",
+              "label": "updatedAt",
+              "widget": "string"
+            },
+            {
+              "name": "books",
+              "label": "ห้องสมุดดิจิทัล",
+              "widget": "list",
+              "summary": "{{fields.title}}",
+              "fields": [
+                {
+                  "name": "id",
+                  "label": "id",
+                  "widget": "string",
+                  "required": false
+                },
+                {
+                  "name": "title",
+                  "label": "ชื่อเรื่อง",
+                  "widget": "string",
+                  "required": false
+                },
+                {
+                  "name": "author",
+                  "label": "ผู้แต่ง",
+                  "widget": "string",
+                  "required": false
+                },
+                {
+                  "name": "ages",
+                  "label": "ช่วงวัย",
+                  "widget": "list",
+                  "required": false,
+                  "field": {
+                    "name": "value",
+                    "label": "ค่า",
+                    "widget": "string"
+                  }
+                },
+                {
+                  "name": "desc",
+                  "label": "เรื่องย่อ",
+                  "widget": "text",
+                  "required": false
+                },
+                {
+                  "name": "url",
+                  "label": "ลิงก์อ่านหนังสือ",
+                  "widget": "string",
+                  "required": false
+                },
+                {
+                  "name": "sourceUrl",
+                  "label": "sourceUrl",
+                  "widget": "string",
+                  "required": false
+                },
+                {
+                  "name": "source",
+                  "label": "หน่วยงานเจ้าของ",
+                  "widget": "string",
+                  "required": false
+                },
+                {
+                  "name": "coverLabel",
+                  "label": "coverLabel",
+                  "widget": "string",
+                  "required": false
+                },
+                {
+                  "name": "rights",
+                  "label": "rights",
+                  "widget": "string",
+                  "required": false
+                },
+                {
+                  "name": "format",
+                  "label": "format",
+                  "widget": "string",
+                  "required": false
+                },
+                {
+                  "name": "pages",
+                  "label": "pages",
+                  "widget": "number",
+                  "required": false
+                },
+                {
+                  "name": "verifiedAt",
+                  "label": "verifiedAt",
+                  "widget": "string",
+                  "required": false
+                },
+                {
+                  "name": "cover",
+                  "label": "ปกหนังสือ",
+                  "widget": "image",
+                  "required": false
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "community_books",
+      "label": "มุมหนังสือชุมชน",
+      "files": [
+        {
+          "name": "community_books",
+          "label": "มุมหนังสือชุมชน",
+          "file": "site/community-books.json",
+          "fields": [
+            {
+              "name": "updatedAt",
+              "label": "updatedAt",
+              "widget": "string"
+            },
+            {
+              "name": "books",
+              "label": "มุมหนังสือชุมชน",
+              "widget": "list",
+              "summary": "{{fields.title}}",
+              "fields": [
+                {
+                  "name": "category",
+                  "label": "หมวดหมู่",
+                  "widget": "string",
+                  "required": false
+                },
+                {
+                  "name": "title",
+                  "label": "ชื่อเรื่อง",
+                  "widget": "string",
+                  "required": false
+                },
+                {
+                  "name": "source",
+                  "label": "หน่วยงานเจ้าของ",
+                  "widget": "string",
+                  "required": false
+                },
+                {
+                  "name": "desc",
+                  "label": "เรื่องย่อ",
+                  "widget": "text",
+                  "required": false
+                },
+                {
+                  "name": "url",
+                  "label": "ลิงก์อ่านหนังสือ",
+                  "widget": "string",
+                  "required": false
+                },
+                {
+                  "name": "id",
+                  "label": "id",
+                  "widget": "number",
+                  "required": false
+                },
+                {
+                  "name": "sourceUrl",
+                  "label": "sourceUrl",
+                  "widget": "string",
+                  "required": false
+                },
+                {
+                  "name": "format",
+                  "label": "format",
+                  "widget": "string",
+                  "required": false
+                },
+                {
+                  "name": "verifiedAt",
+                  "label": "verifiedAt",
+                  "widget": "string",
+                  "required": false
+                },
+                {
+                  "name": "verification",
+                  "label": "verification",
+                  "widget": "string",
+                  "required": false
+                },
+                {
+                  "name": "mobileStatus",
+                  "label": "mobileStatus",
+                  "widget": "string",
+                  "required": false
+                },
+                {
+                  "name": "coverLabel",
+                  "label": "coverLabel",
+                  "widget": "string",
+                  "required": false
+                },
+                {
+                  "name": "cover",
+                  "label": "ปกหนังสือ",
+                  "widget": "image",
+                  "required": false
+                },
+                {
+                  "name": "note",
+                  "label": "note",
+                  "widget": "string",
+                  "required": false
+                },
+                {
+                  "name": "resolvedUrl",
+                  "label": "resolvedUrl",
+                  "widget": "string",
+                  "required": false
+                },
+                {
+                  "name": "localFile",
+                  "label": "localFile",
+                  "widget": "string",
+                  "required": false
+                },
+                {
+                  "name": "pageTitle",
+                  "label": "pageTitle",
+                  "widget": "string",
+                  "required": false
+                },
+                {
+                  "name": "documentLinks",
+                  "label": "documentLinks",
+                  "widget": "list",
+                  "required": false,
+                  "field": {
+                    "name": "value",
+                    "label": "ค่า",
+                    "widget": "string"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "etv",
+      "label": "รายการสื่อ ETV",
+      "files": [
+        {
+          "name": "etv",
+          "label": "รายการสื่อ ETV",
+          "file": "site/etv-lessons.json",
+          "fields": [
+            {
+              "name": "schemaVersion",
+              "label": "schemaVersion",
+              "widget": "number"
+            },
+            {
+              "name": "lessons",
+              "label": "รายการสื่อ ETV",
+              "widget": "list",
+              "summary": "{{fields.title}}",
+              "fields": [
+                {
+                  "name": "videoId",
+                  "label": "รหัสวิดีโอ YouTube",
+                  "widget": "string",
+                  "required": false
+                },
+                {
+                  "name": "title",
+                  "label": "ชื่อเรื่อง",
+                  "widget": "string",
+                  "required": false
+                },
+                {
+                  "name": "subject",
+                  "label": "subject",
+                  "widget": "string",
+                  "required": false
+                },
+                {
+                  "name": "subjectName",
+                  "label": "subjectName",
+                  "widget": "string",
+                  "required": false
+                },
+                {
+                  "name": "level",
+                  "label": "level",
+                  "widget": "string",
+                  "required": false
+                },
+                {
+                  "name": "levelName",
+                  "label": "levelName",
+                  "widget": "string",
+                  "required": false
+                },
+                {
+                  "name": "courseCode",
+                  "label": "courseCode",
+                  "widget": "string",
+                  "required": false
+                },
+                {
+                  "name": "curriculum",
+                  "label": "curriculum",
+                  "widget": "string",
+                  "required": false
+                },
+                {
+                  "name": "lesson",
+                  "label": "lesson",
+                  "widget": "string",
+                  "required": false
+                },
+                {
+                  "name": "description",
+                  "label": "รายละเอียด",
+                  "widget": "text",
+                  "required": false
+                },
+                {
+                  "name": "thumbnail",
+                  "label": "thumbnail",
+                  "widget": "image",
+                  "required": false
+                },
+                {
+                  "name": "youtubeUrl",
+                  "label": "ลิงก์ YouTube",
+                  "widget": "string",
+                  "required": false
+                },
+                {
+                  "name": "sourceChannel",
+                  "label": "sourceChannel",
+                  "widget": "string",
+                  "required": false
+                },
+                {
+                  "name": "sourceChannelUrl",
+                  "label": "sourceChannelUrl",
+                  "widget": "string",
+                  "required": false
+                },
+                {
+                  "name": "verificationStatus",
+                  "label": "verificationStatus",
+                  "widget": "string",
+                  "required": false
+                },
+                {
+                  "name": "verifiedAt",
+                  "label": "verifiedAt",
+                  "widget": "string",
+                  "required": false
+                },
+                {
+                  "name": "verificationNote",
+                  "label": "verificationNote",
+                  "widget": "string",
+                  "required": false
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
