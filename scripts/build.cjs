@@ -45,7 +45,7 @@ function updateLearningCard(){
  const file=path.join(out,'care.html');let html=fs.readFileSync(file,'utf8');
  const pattern=/<article class="info-card[^"]*"><h2>📖 ติดตามการเรียน<\/h2>[\s\S]*?<\/article>/;
  if(!pattern.test(html))throw Error('Learning follow-up card missing');
- const card='<article class="info-card" id="learner-work"><h2>📖 ติดตามการเรียน</h2><p>ตรวจสอบสถานะการส่งงาน ลงชื่อเข้าเรียน และส่งภาพผลงานออนไลน์ สำหรับนักศึกษา ม.ต้น และ ม.ปลาย</p><a class="link-card" href="https://script.google.com/macros/s/AKfycbz5wxrRGo2e2TQ_VEQYZ0KgwRonFehli35iCJ1sWurP_SCbQhJRbZ2MIm0H_YZUXOyZ/exec" target="_blank" rel="noopener noreferrer">เปิดระบบติดตามงาน ลงชื่อเข้าเรียน และส่งผลงาน ↗</a></article>';
+ const card='<article class="info-card" id="learner-work"><h2>📝 งานที่มอบหมายและคะแนนเก็บระหว่างภาคเรียน</h2><p>ตรวจสอบงานที่ได้รับมอบหมายและสถานะการส่งงานระหว่างภาคเรียน พร้อมลงชื่อเข้าเรียนและส่งผลงานออนไลน์</p><a class="link-card" href="https://script.google.com/macros/s/AKfycbz5wxrRGo2e2TQ_VEQYZ0KgwRonFehli35iCJ1sWurP_SCbQhJRbZ2MIm0H_YZUXOyZ/exec" target="_blank" rel="noopener noreferrer">เข้าสู่ระบบ →</a></article>';
  html=html.replace(pattern,()=>card);fs.writeFileSync(file,html);
 }
 
@@ -57,5 +57,15 @@ function renameLearnerCare(){
  }
 }
 
-function build(){fs.mkdirSync(out,{recursive:true});fs.cpSync(path.join(root,'site'),out,{recursive:true});fs.cpSync(path.join(root,'admin'),path.join(out,'admin'),{recursive:true});for(const [key,meta]of Object.entries(pages)){const data=JSON.parse(fs.readFileSync(path.join(root,'content',key+'.json'),'utf8'));const file=path.join(out,meta.file);fs.writeFileSync(file,render(fs.readFileSync(file,'utf8'),data,manifest[key]));}addLearnerServices();updateLearningCard();renameLearnerCare();console.log('Built Pangiew website, CMS and learner service links.');}
+
+function updateScheduleCard(){
+ const file=path.join(out,'online.html');let html=fs.readFileSync(file,'utf8');
+ const oldTitle='📝 ตารางเรียนและงานที่มอบหมาย';
+ if(!html.includes(oldTitle))throw Error('Schedule card title missing');
+ html=html.replace(oldTitle,'🗓️ ตารางเรียนและปฏิทินการพบกลุ่ม');
+ html=html.replace('โปรดสอบถามครูผู้สอนหรือดูประกาศในห้องเรียน Padlet สำหรับตารางเรียนและงานที่ได้รับมอบหมาย','ตรวจสอบตารางเรียนและกำหนดการพบกลุ่มจากประกาศในห้องเรียน Padlet หรือสอบถามครูผู้สอน');
+ fs.writeFileSync(file,html);
+}
+
+function build(){fs.mkdirSync(out,{recursive:true});fs.cpSync(path.join(root,'site'),out,{recursive:true});fs.cpSync(path.join(root,'admin'),path.join(out,'admin'),{recursive:true});for(const [key,meta]of Object.entries(pages)){const data=JSON.parse(fs.readFileSync(path.join(root,'content',key+'.json'),'utf8'));const file=path.join(out,meta.file);fs.writeFileSync(file,render(fs.readFileSync(file,'utf8'),data,manifest[key]));}addLearnerServices();updateLearningCard();renameLearnerCare();updateScheduleCard();console.log('Built Pangiew website, CMS and learner service links.');}
 if(require.main===module)build();module.exports={render,safeImage,build};
