@@ -6,9 +6,15 @@ module.exports=async(req,res)=>{
   try{
     const c=settings();const state=req.query.state;const cookie=(req.headers.cookie||'').split(';').map(x=>x.trim()).find(x=>x.startsWith('__Host-tc_oauth='))?.slice('__Host-tc_oauth='.length);
     if(typeof state!=='string'||!cookie||state!==cookie||!valid(state,c.key)||typeof req.query.code!=='string')return res.status(400).end('Invalid or expired login. Please start again.');
-    const response=await fetch('https://github.com/login/oauth/access_token',{method:'POST',headers:{Accept:'application/json','Content-Type':'application/x-www-form-urlencoded'},body:new URLSearchParams({client_id:c.client,client_secret:c.secret,code:req.query.code,redirect_uri:c.origin+'/api/cms-callback'}),signal:AbortSignal.timeout(15000)});
-    const result=await response.json();if(!response.ok||typeof result.access_token!=='string')return res.status(401).end('GitHub login failed');
-    const apiHeaders={Authorization:'Bearer '+result.access_token,Accept:'application/vnd.github+json','X-GitHub-Api-Version':'2022-11-28','User-Agent':'Thachai-CMS'};
+    const response=await fetch('https://github.com/login/oauth/access_token',{method:'POST',headers:{Accept:'application/json','Content-Type':'application/x-www-form-urlencoded'},body:new URLSearchParams({client_id:c.client.trim(),client_secret:c.secret.trim(),code:req.query.code,redirect_uri:c.origin+'/api/cms-callback'}),signal:AbortSignal.timeout(15000)});
+    const result=await response.json();
+    if(!response.ok||typeof result.access_token!=='string'){
+      const reasons={incorrect_client_credentials:'Client ID and Client Secret do not match this OAuth app.',bad_verification_code:'Login code expired or was already used. Close this window and start a new login.',redirect_uri_mismatch:'The OAuth redirect URI does not match the website callback URL.',unverified_user_email:'Verify the email address of the GitHub account first.',access_denied:'GitHub authorization was not granted.'};
+      const error=Object.hasOwn(reasons,result.error)?result.error:'token_exchange_failed';
+      res.setHeader('Content-Type','text/plain; charset=utf-8');
+      return res.status(401).end('GitHub login failed ['+error+']. '+(reasons[error]||'GitHub did not return a usable access token. HTTP '+response.status+'.'));
+    }
+    const apiHeaders={Authorization:'Bearer '+result.access_token,Accept:'application/vnd.github+json','X-GitHub-Api-Version':'2022-11-28','User-Agent':'Pangiew-CMS'};
     const userResponse=await fetch('https://api.github.com/user',{headers:apiHeaders,signal:AbortSignal.timeout(15000)});const user=await userResponse.json();
     if(!userResponse.ok||String(user.login).toLowerCase()!==c.login)return res.status(403).end('This GitHub account is not an administrator of this website.');
     const repoResponse=await fetch('https://api.github.com/repos/'+c.repo,{headers:apiHeaders,signal:AbortSignal.timeout(15000)});const repo=await repoResponse.json();
