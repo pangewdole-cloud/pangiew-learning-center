@@ -29,7 +29,6 @@ function render(html,data,ranges){
 
 function addLearnerServices(){
  const services=[
-  {file:'online.html',id:'learner-work',title:'ติดตามงาน ลงชื่อเข้าเรียน และส่งผลงาน',description:'ตรวจสอบสถานะการส่งงาน ลงชื่อเข้าเรียน และส่งภาพผลงานออนไลน์ สำหรับนักศึกษา ม.ต้น และ ม.ปลาย',label:'เปิดระบบติดตามงานและลงชื่อเข้าเรียน ↗',href:'https://script.google.com/macros/s/AKfycbz5wxrRGo2e2TQ_VEQYZ0KgwRonFehli35iCJ1sWurP_SCbQhJRbZ2MIm0H_YZUXOyZ/exec'},
   {file:'care.html',id:'learner-results',title:'ตรวจสอบผลการเรียน',description:'เข้าสู่แพลตฟอร์มข้อมูลผู้เรียน กรมส่งเสริมการเรียนรู้ (DOLE LD) เพื่อตรวจสอบข้อมูลและผลการเรียนของตนเอง',label:'ตรวจสอบผลการเรียน — DOLE LD ↗',href:'https://learnerdata.dole.go.th/'}
  ];
  for(const item of services){
@@ -41,5 +40,14 @@ function addLearnerServices(){
  }
 }
 
-function build(){fs.mkdirSync(out,{recursive:true});fs.cpSync(path.join(root,'site'),out,{recursive:true});fs.cpSync(path.join(root,'admin'),path.join(out,'admin'),{recursive:true});for(const [key,meta]of Object.entries(pages)){const data=JSON.parse(fs.readFileSync(path.join(root,'content',key+'.json'),'utf8'));const file=path.join(out,meta.file);fs.writeFileSync(file,render(fs.readFileSync(file,'utf8'),data,manifest[key]));}addLearnerServices();console.log('Built Pangiew website, CMS and learner service links.');}
+
+function updateLearningCard(){
+ const file=path.join(out,'care.html');let html=fs.readFileSync(file,'utf8');
+ const pattern=/<article class="info-card[^"]*"><h2>📖 ติดตามการเรียน<\/h2>[\s\S]*?<\/article>/;
+ if(!pattern.test(html))throw Error('Learning follow-up card missing');
+ const card='<article class="info-card" id="learner-work"><h2>📖 ติดตามการเรียน</h2><p>ตรวจสอบสถานะการส่งงาน ลงชื่อเข้าเรียน และส่งภาพผลงานออนไลน์ สำหรับนักศึกษา ม.ต้น และ ม.ปลาย</p><a class="link-card" href="https://script.google.com/macros/s/AKfycbz5wxrRGo2e2TQ_VEQYZ0KgwRonFehli35iCJ1sWurP_SCbQhJRbZ2MIm0H_YZUXOyZ/exec" target="_blank" rel="noopener noreferrer">เปิดระบบติดตามงาน ลงชื่อเข้าเรียน และส่งผลงาน ↗</a></article>';
+ html=html.replace(pattern,()=>card);fs.writeFileSync(file,html);
+}
+
+function build(){fs.mkdirSync(out,{recursive:true});fs.cpSync(path.join(root,'site'),out,{recursive:true});fs.cpSync(path.join(root,'admin'),path.join(out,'admin'),{recursive:true});for(const [key,meta]of Object.entries(pages)){const data=JSON.parse(fs.readFileSync(path.join(root,'content',key+'.json'),'utf8'));const file=path.join(out,meta.file);fs.writeFileSync(file,render(fs.readFileSync(file,'utf8'),data,manifest[key]));}addLearnerServices();updateLearningCard();console.log('Built Pangiew website, CMS and learner service links.');}
 if(require.main===module)build();module.exports={render,safeImage,build};
