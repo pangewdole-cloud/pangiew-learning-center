@@ -49,5 +49,13 @@ function updateLearningCard(){
  html=html.replace(pattern,()=>card);fs.writeFileSync(file,html);
 }
 
-function build(){fs.mkdirSync(out,{recursive:true});fs.cpSync(path.join(root,'site'),out,{recursive:true});fs.cpSync(path.join(root,'admin'),path.join(out,'admin'),{recursive:true});for(const [key,meta]of Object.entries(pages)){const data=JSON.parse(fs.readFileSync(path.join(root,'content',key+'.json'),'utf8'));const file=path.join(out,meta.file);fs.writeFileSync(file,render(fs.readFileSync(file,'utf8'),data,manifest[key]));}addLearnerServices();updateLearningCard();console.log('Built Pangiew website, CMS and learner service links.');}
+
+function renameLearnerCare(){
+ for(const name of fs.readdirSync(out).filter(name=>name.endsWith('.html'))){
+  const file=path.join(out,name);const html=fs.readFileSync(file,'utf8');
+  fs.writeFileSync(file,html.replace(/ระบบดูแลผู้เรียน|ดูแลผู้เรียน/g,'ระบบดูแลช่วยเหลือผู้เรียน'));
+ }
+}
+
+function build(){fs.mkdirSync(out,{recursive:true});fs.cpSync(path.join(root,'site'),out,{recursive:true});fs.cpSync(path.join(root,'admin'),path.join(out,'admin'),{recursive:true});for(const [key,meta]of Object.entries(pages)){const data=JSON.parse(fs.readFileSync(path.join(root,'content',key+'.json'),'utf8'));const file=path.join(out,meta.file);fs.writeFileSync(file,render(fs.readFileSync(file,'utf8'),data,manifest[key]));}addLearnerServices();updateLearningCard();renameLearnerCare();console.log('Built Pangiew website, CMS and learner service links.');}
 if(require.main===module)build();module.exports={render,safeImage,build};
