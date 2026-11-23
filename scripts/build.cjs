@@ -26,5 +26,20 @@ function render(html,data,ranges){
  }
  return html;
 }
-function build(){fs.mkdirSync(out,{recursive:true});fs.cpSync(path.join(root,'site'),out,{recursive:true});fs.cpSync(path.join(root,'admin'),path.join(out,'admin'),{recursive:true});for(const [key,meta]of Object.entries(pages)){const data=JSON.parse(fs.readFileSync(path.join(root,'content',key+'.json'),'utf8'));const file=path.join(out,meta.file);fs.writeFileSync(file,render(fs.readFileSync(file,'utf8'),data,manifest[key]));}console.log('Built Pangiew website and CMS. Real login requires OAuth environment settings.');}
+
+function addLearnerServices(){
+ const services=[
+  {file:'online.html',id:'learner-work',title:'ติดตามงาน ลงชื่อเข้าเรียน และส่งผลงาน',description:'ตรวจสอบสถานะการส่งงาน ลงชื่อเข้าเรียน และส่งภาพผลงานออนไลน์ สำหรับนักศึกษา ม.ต้น และ ม.ปลาย',label:'เปิดระบบติดตามงานและลงชื่อเข้าเรียน ↗',href:'https://script.google.com/macros/s/AKfycbz5wxrRGo2e2TQ_VEQYZ0KgwRonFehli35iCJ1sWurP_SCbQhJRbZ2MIm0H_YZUXOyZ/exec'},
+  {file:'care.html',id:'learner-results',title:'ตรวจสอบผลการเรียน',description:'เข้าสู่แพลตฟอร์มข้อมูลผู้เรียน กรมส่งเสริมการเรียนรู้ (DOLE LD) เพื่อตรวจสอบข้อมูลและผลการเรียนของตนเอง',label:'ตรวจสอบผลการเรียน — DOLE LD ↗',href:'https://learnerdata.dole.go.th/'}
+ ];
+ for(const item of services){
+  const file=path.join(out,item.file);let html=fs.readFileSync(file,'utf8');
+  const main=html.indexOf('<main'),wrap=html.indexOf('<div class="wrap">',main),heading=html.indexOf('</h1>',wrap);
+  if(main<0||wrap<0||heading<0)throw Error('Learner service placement missing: '+item.file);
+  const card='<section class="school-section" id="'+item.id+'" aria-labelledby="'+item.id+'-title"><h2 id="'+item.id+'-title">'+escape(item.title)+'</h2><p>'+escape(item.description)+'</p><a class="btn btn-primary" href="'+escape(item.href)+'" target="_blank" rel="noopener noreferrer">'+escape(item.label)+'</a></section>';
+  html=html.slice(0,heading+5)+card+html.slice(heading+5);fs.writeFileSync(file,html);
+ }
+}
+
+function build(){fs.mkdirSync(out,{recursive:true});fs.cpSync(path.join(root,'site'),out,{recursive:true});fs.cpSync(path.join(root,'admin'),path.join(out,'admin'),{recursive:true});for(const [key,meta]of Object.entries(pages)){const data=JSON.parse(fs.readFileSync(path.join(root,'content',key+'.json'),'utf8'));const file=path.join(out,meta.file);fs.writeFileSync(file,render(fs.readFileSync(file,'utf8'),data,manifest[key]));}addLearnerServices();console.log('Built Pangiew website, CMS and learner service links.');}
 if(require.main===module)build();module.exports={render,safeImage,build};
